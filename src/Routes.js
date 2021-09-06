@@ -39,6 +39,12 @@ function Routes(props) {
         hidden={false}
         translucent
       />
+      {/* <StatusBar
+        backgroundColor="#fff"
+        barStyle="dark-content"
+        hidden={false}
+        translucent
+      /> */}
       <NavigationContainer>
         <Drawer.Navigator 
         drawerContent={(props)=>(<SideDrawer {...props}/>)}
