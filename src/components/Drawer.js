@@ -68,11 +68,19 @@ const showCustomer = (props) => (
            label="My Orders"
            onPress={() => {props.navigation.navigate("My Orders")}}
          />
+         
+         
          <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="Order Detaill"
            onPress={() => {props.navigation.navigate("Show Order Detail")}}
+         />
+         <DrawerItem
+       
+       labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
+           label="SignUp"
+           onPress={() => {props.navigation.navigate("SignUp")}}
          />
 <DrawerItem
        

@@ -70,7 +70,7 @@ function Routes(props) {
           <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="Change Password" component={Changepassword} />
           <Drawer.Screen name="Customer Details" component={CustomerDetail} />
-
+          <Drawer.Screen name="SignUp" component={SignUp} />    
           <Drawer.Screen name="Stocks" component={Stocks} />
         </Drawer.Navigator>
       </NavigationContainer>

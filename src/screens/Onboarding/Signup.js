@@ -13,17 +13,25 @@ import TextInput from '../../components/CustomInputs/PasswordField';
 import IconButton from '../../components/CustomButtons/IconButton';
 import Nav from "../../components/Headers/header"
 import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
-const LoginScreen = ({navigation}) => (
+const SignupScreen = ({navigation}) => (
   <Container>
-    <Header >
-<Nav/>
-
+    <Header>
+      <Nav
+        centreComponent={
+          <Typography color={"yellow"} size={27} type={"light"}>SIGNUP</Typography>
+        }
+        rightComponent={
+          <View style={{ marginRight: 10 }}>
+            <Typography color={"textSecondary"} size={15} type={"light"}>SKIP</Typography>
+          </View>
+        }
+      />
     </Header>
     <Content>
 
    <View style={styles.main}>
 
-<View style={styles.inputView}>
+   <View style={styles.inputView}>
 
         <Typography size={22} style={{backgroundColor:"red"}} type={'medium'} style={styles.title}>
           Enter your mobile number
@@ -72,4 +80,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default memo(LoginScreen);
+export default memo(SignupScreen);
