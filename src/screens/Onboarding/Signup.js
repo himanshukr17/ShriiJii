@@ -16,7 +16,7 @@ import Nav from "../../components/Headers/header"
 import Button from '../../components/CustomButtons/Button';
 import InputField from "../../components/CustomInputs/InputField";
 import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
-const SignupScreen = ({navigation}) => (
+const SignupScreen = (props) => (
   <Container>
     <Header>
       <Nav
@@ -75,7 +75,9 @@ const SignupScreen = ({navigation}) => (
         <Button style={{ marginTop: 20, width: '40%' }} title="Sign Up" />
         <View style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
           <Typography color="textSecondary">ALREADY HAVE AN ACCOUNT? </Typography>
+          <TouchableOpacity  onPress = {() => props.navigation.navigate("LoginScreen")}>
           <Typography color="textPrimary" type={"extraBold"}>SIGN IN.</Typography>
+          </TouchableOpacity>
         </View>
       </View>
 

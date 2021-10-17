@@ -28,14 +28,17 @@ import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
 import { BoxShadow } from 'react-native-shadow'
 import Card from "../../components/Cards/ProductCardH"
 import { TouchableOpacity } from 'react-native-gesture-handler';
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = (props ) => {
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const [items, setItems] = useState([
         {label: 'Red', value: '0'},
         {label: 'Blue', value: '1'},
-        {label: 'Black', value: '2'},
-        {label: 'White', value: '3'}
+        {label: 'Green', value: '2'},
+        {label: 'Orange', value: '3'},
+        {label: 'Violet', value: '4'},
+        {label: 'Black', value: '5'},
+        {label: 'White', value: '6'}
       ]);
 
     return(
@@ -46,7 +49,7 @@ const LoginScreen = ({ navigation }) => {
 
                 leftComponent={
                     <Icon
-                        onPress={() => navigation.toggleDrawer()}
+                        onPress={() => props.navigation.toggleDrawer()}
                         name={"list"}
                         type={"feather"}
                         size={25}
@@ -90,9 +93,11 @@ const LoginScreen = ({ navigation }) => {
            <Typography size={15} type={"italic"} style={{marginTop:15,marginBottom:4}}>BLOGS</Typography>
             <Divider style={{ backgroundColor: "#ffb300", height: 1.5,width:'30%',marginLeft:-2 }} />
             </View> */}
+             {/* <TouchableOpacity onPress={()=>navigation.goBack()}> */}
+
             <View >
                 <Avatar border={6} source={{ uri: 'https://cdn.pixabay.com/photo/2016/08/12/14/25/abstract-1588720_960_720.jpg' }} style={{ resizeMode: 'contain', height: 250, width: '100%' }}>
-                    
+                    <Avatar.Accessory onPress={()=>props.navigation.goBack()} type="ionicon" name="caret-back-outline" color="#a8a8a8" style={{ backgroundColor: 'white', marginTop: -100, top: 105, left: 5 }} size={35} />
                     <Avatar.Accessory type="ionicon" name="heart" color="#a8a8a8" style={{ backgroundColor: 'white', marginTop: -100, top: 105, right: 5 }} size={35} />
                     <Avatar.Accessory type="ionicon" name="share-social" color="#a8a8a8" style={{ backgroundColor: 'white', marginTop: -100, bottom: 5, right: 5 }} size={35} />
                     
@@ -127,9 +132,9 @@ const LoginScreen = ({ navigation }) => {
 <View style={{alignItems:'center'}}>
     <Typography size={15} style={{marginBottom:2}}> Quantity : </Typography>
 <NumericInput 
-            // value={this.state.value} 
-            // onChange={value => this.setState({value})} 
-            // onLimitReached={(isMax,msg) => console.log(isMax,msg)}
+             //value={this.state.value} 
+            onChange={() =>{}} 
+            //onLimitReached={(isMax,msg) => console.log(isMax,msg)}
             totalWidth={130} 
             totalHeight={35} 
             iconSize={25}
@@ -151,7 +156,7 @@ const LoginScreen = ({ navigation }) => {
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
-      style={{width:80,height:35}}
+      style={{width:100,height:35}}
     />
     </View>
 </View>

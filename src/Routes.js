@@ -49,6 +49,8 @@ function Routes(props) {
         <Drawer.Navigator 
         drawerContent={(props)=>(<SideDrawer {...props}/>)}
         headerMode={false}>
+                    <Drawer.Screen name="LoginScreen" component={LoginScreen} />
+
             <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Checkout" component={Checkout} />
           <Drawer.Screen name="Order" component={Order} />
@@ -58,7 +60,6 @@ function Routes(props) {
           {/* <Drawer.Screen name="Password" component={Password} />
                 <Drawer.Screen name="Otp" component={OTP}/>
               <Drawer.Screen name="Signup" component={SignUp} /> */}
-          <Drawer.Screen name="LoginScreen" component={LoginScreen} />
           <Drawer.Screen name="showCustomer" component={showCustomer} />
           <Drawer.Screen name="Add customer" component={Addcustomer} />
           <Drawer.Screen

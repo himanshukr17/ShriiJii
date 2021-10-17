@@ -13,7 +13,7 @@ import Typography from '../../components/Typography/Typography';
 import TextInput from '../../components/CustomInputs/PasswordField';
 import Button from '../../components/CustomButtons/Button';
 import InputField from "../../components/CustomInputs/InputField";
-const LoginScreen = ({ navigation }) => (
+const LoginScreen = ( props) => (
   <Container>
     <Header>
       <Nav
@@ -71,10 +71,12 @@ const LoginScreen = ({ navigation }) => (
     </Content>
     <Footer>
       <View style={{ alignItems: 'center', marginTop: 10 }}>
-        <Button style={{ marginTop: 20, width: '40%' }} title="Log In" />
+        <Button style={{ marginTop: 20, width: '40%' }} title="Log In" onPress={()=>props.navigation.navigate("Home")} />
         <View style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
           <Typography color="textSecondary">Want to create another account?  </Typography>
+          <TouchableOpacity onPress={()=>props.navigation.navigate("SignUp")}>
           <Typography color="textPrimary" type={"extraBold"}>SIGN UP.</Typography>
+        </TouchableOpacity>
         </View>
       </View>
 
