@@ -21,9 +21,11 @@ const LoginScreen = ( props) => (
           <Typography color={"yellow"} size={27} type={"light"}>SIGN IN</Typography>
         }
         rightComponent={
+          <TouchableOpacity onPress={()=> props.navigation.navigate("Home")}>
           <View style={{ marginRight: 10 }}>
             <Typography color={"textSecondary"} size={15} type={"light"}>SKIP</Typography>
           </View>
+          </TouchableOpacity>
         }
       />
     </Header>

@@ -21,12 +21,14 @@ const SignupScreen = (props) => (
     <Header>
       <Nav
         centerComponent={
-          <Typography color={"yellow"} size={27} type={"extraBold"}>SIGNUP</Typography>
+          <Typography color={"yellow"} size={27} type={"light"}>SIGN UP</Typography>
         }
         rightComponent={
+          <TouchableOpacity onPress={()=>props.navigation.navigate("Home")}>
           <View style={{ marginRight: 10 }}>
             <Typography color={"textTertiary"} size={15} type={"light"}>SKIP</Typography>
           </View>
+          </TouchableOpacity>
         }
       />
     </Header>
@@ -63,10 +65,9 @@ const SignupScreen = (props) => (
         <InputField placeholder="Email Address" />
         <View style={{ marginTop: -4 }}>
           <TextInput placeholder="Password" />
-         {/* <View style={styles.forgetPass}> 
-            <Typography size={14} type={"semiBold"} color={"yellow"} >Forget Password?</Typography>
-          </View> */}
+         
         </View>
+        <TextInput placeholder="Confirm Password" />
         
       </View>
     </Content>
@@ -88,7 +89,7 @@ const SignupScreen = (props) => (
 const styles = StyleSheet.create({
   inputView: {
     flex: 1,
-    marginTop:50,
+    marginTop:110,
     justifyContent: 'flex-start',
   },
   title: {
@@ -101,12 +102,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 8
   },
-  forgetPass: {
-
-    flexDirection: 'row',
-    justifyContent: "flex-end"
-
-  },
+  
   tinyLogo: {
     height: 50,
     marginTop: 40,

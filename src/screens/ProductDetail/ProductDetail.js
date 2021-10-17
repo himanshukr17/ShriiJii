@@ -41,14 +41,16 @@ const LoginScreen = (props) => (
 
                 rightComponent={
                     <View style={{ flexDirection: 'row' }}>
-                        <Icon
+                        <View style={{marginRight: 14 }}>
+                        <Icon onPress={()=> props.navigation.navigate("Wishlist")}
                             name={"heart"}
                             type={"ionicon"}
                             color={"red"}
                             size={25}
                             style={{ marginRight: 14 }}
                         />
-                        <Icon
+                        </View>
+                        <Icon onPress={()=> props.navigation.navigate("Cart")}
                             name={"cart-outline"}
                             type={"ionicon"}
                             color={"#ffb300"}

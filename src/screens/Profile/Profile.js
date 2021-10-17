@@ -31,7 +31,7 @@ export default function Profile(props) {
 
                     rightComponent={
                         <View style={{ flexDirection: 'row' }}>
-
+                            <View style={{marginRight: 14 }}>
                             <Icon
                                 onPress={() => props.navigation.navigate("Wishlist")}
                                 name={"heart"}
@@ -40,7 +40,7 @@ export default function Profile(props) {
                                 size={25}
                                 style={{ marginRight: 15 }}
                             />
-
+                            </View>
                             <Icon
                                 onPress={() => props.navigation.navigate("Cart")}
                                 name={"cart-outline"}
