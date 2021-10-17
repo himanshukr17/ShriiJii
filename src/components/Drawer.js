@@ -34,7 +34,7 @@ const showCustomer = (props) => (
       'https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image.jpeg',
   }}
 />
-<Typography size={16} type={"semiBold"} style={{marginTop:8}}>Himanshu Sharma</Typography>
+<Typography size={16} type={"semiBold"} style={{marginTop:8}}>Muskan Himanshu Sharma</Typography>
   </View>
   
         {/* <DrawerItem
@@ -76,24 +76,24 @@ const showCustomer = (props) => (
            label="Order Detaill"
            onPress={() => {props.navigation.navigate("Show Order Detail")}}
          />
-         <DrawerItem
+         {/* <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="SignUp"
            onPress={() => {props.navigation.navigate("SignUp")}}
-         />
+         /> */}
 <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="Cart"
            onPress={() => {props.navigation.navigate("Cart")}}
          />
-<DrawerItem
+{/* <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="Order"
            onPress={() => {props.navigation.navigate("Order")}}
-         />
+         /> */}
 {/* <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}

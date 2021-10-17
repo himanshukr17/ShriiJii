@@ -20,8 +20,8 @@ const SignupScreen = (props) => (
   <Container>
     <Header>
       <Nav
-        centreComponent={
-          <Typography color={"yellow"} size={27} type={"light"}>SIGNUP</Typography>
+        centerComponent={
+          <Typography color={"yellow"} size={27} type={"extraBold"}>SIGNUP</Typography>
         }
         rightComponent={
           <View style={{ marginRight: 10 }}>
@@ -72,7 +72,7 @@ const SignupScreen = (props) => (
     </Content>
     <Footer>
     <View style={{ alignItems: 'center', marginTop: 10 }}>
-        <Button style={{ marginTop: 20, width: '40%' }} title="Sign Up" />
+        <Button style={{ marginTop: 20, width: '40%' }} title="Sign Up" onPress = {() => props.navigation.navigate("Home")} />
         <View style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
           <Typography color="textSecondary">ALREADY HAVE AN ACCOUNT? </Typography>
           <TouchableOpacity  onPress = {() => props.navigation.navigate("LoginScreen")}>

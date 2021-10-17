@@ -25,14 +25,14 @@ import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
 import { BoxShadow } from 'react-native-shadow'
 import Card from "../../components/Cards/ProductCardH"
 import { TouchableOpacity } from 'react-native-gesture-handler';
-const LoginScreen = ({ navigation }) => (
+const LoginScreen = (props) => (
     <Container>
         <Header  >
             <Nav
 
                 leftComponent={
                     <Icon
-                        onPress={() => navigation.toggleDrawer()}
+                        onPress={() => props.navigation.toggleDrawer()}
                         name={"list"}
                         type={"feather"}
                         size={25}

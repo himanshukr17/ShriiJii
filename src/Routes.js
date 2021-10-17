@@ -23,6 +23,7 @@ import Changepassword from './screens/Profile/Changepassword';
 import Profile from './screens/Profile/Profile';
 import AddClaim from './screens/Claims/AddClaim';
 import Stocks from './screens/Stocks/stock';
+import Wishlist from './screens/Claims/Wishlist';
 import SideDrawer from "./components/Drawer"
 import Typography from "./components/Typography/Typography";
 import Order from './screens/Claims/Order';
@@ -50,7 +51,7 @@ function Routes(props) {
         drawerContent={(props)=>(<SideDrawer {...props}/>)}
         headerMode={false}>
                     <Drawer.Screen name="LoginScreen" component={LoginScreen} />
-
+                    <Drawer.Screen name="Wishlist" component={Wishlist} />
             <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Checkout" component={Checkout} />
           <Drawer.Screen name="Order" component={Order} />
