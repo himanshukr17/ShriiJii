@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo,useState } from 'react';
 import { ThemeProvider } from 'react-native-elements';
 
 import Background from '../../components/Background';
@@ -24,7 +24,13 @@ import { BlurView } from "@react-native-community/blur";
 import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
 import { BoxShadow } from 'react-native-shadow'
 import Card from "../../components/Cards/ProductCardH"
-const LoginScreen = (props) => (
+const LoginScreen = (props) => {
+
+const[state,setState]=useState("#a8a8a8")
+
+
+
+    return(
     <Container>
         <Header  >
             <Nav
@@ -82,7 +88,9 @@ const LoginScreen = (props) => (
          subtitle2={"Rs.20000/-"}
          badgeText={"Farmer"}
          badgeColor={"green"}
+         colour={state}
          avatar_url={"../../assets/images/apple.png"}
+         onPress1={()=>setState(state=="#a8a8a8"?"#DC143C":"#a8a8a8")}
          />
          
        
@@ -221,7 +229,7 @@ const LoginScreen = (props) => (
 
         </Footer>
     </Container>
-);
+)};
 
 const styles = StyleSheet.create({
     inputView: {

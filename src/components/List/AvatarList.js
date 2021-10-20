@@ -15,7 +15,9 @@ onPress,
 subtitle,
 avatar_url,
 subtitle1,
-subtitle2
+subtitle2,
+colour,
+onPress1
     }=props
 
   return(
@@ -26,7 +28,7 @@ subtitle2
   <ListItem onPress={onPress} containerStyle={{backgroundColor:"white",borderBottomWidth:bottomDivider?1:0,borderColor:"#e2e2e2"}}>
   <View style={{flexDirection:'column'}}>
   <Avatar border={6} source={{uri : 'https://cdn.pixabay.com/photo/2016/08/12/14/25/abstract-1588720_960_720.jpg'}} size={170}>
-  <Avatar.Accessory type="ionicon" name="heart" color="#a8a8a8" style={{backgroundColor:'white',marginTop:-100,top:105,right:5}} size={35}/>
+  <Avatar.Accessory type="ionicon" onPress={onPress1} name="heart" color={colour} style={{backgroundColor:'white',marginTop:-100,top:105,right:5}} size={35}/>
   </Avatar>
   {/* <Image
           style={{resizeMode : 'contain',width:'300%',height:95,flex:1}}
