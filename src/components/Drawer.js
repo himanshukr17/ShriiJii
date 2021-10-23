@@ -43,37 +43,47 @@ const showCustomer = (props) => (
             label="Home"
             onPress={() => {props.navigation.navigate("Home")}}
           /> */}
-        <DrawerItem
-       
-        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
-            label="ProductDetail"
-            onPress={() => {props.navigation.navigate("ProductDetail")}}
-          />
-<DrawerItem
-       
-       labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
-           label="Profile"
-           onPress={() => {props.navigation.navigate("Profile")}}
-         />
-         
+
 <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="Login"
            onPress={() => {props.navigation.navigate("LoginScreen")}}
          />
+
+<DrawerItem
+       
+       labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
+           label="Profile"
+           onPress={() => {props.navigation.navigate("Profile")}}
+         />
+
 <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="My Orders"
            onPress={() => {props.navigation.navigate("My Orders")}}
          />
-         
-         
-         <DrawerItem
+
+      
+<DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
-           label="Order Detaill"
+           label="Logout"
+           onPress={() => {props.navigation.navigate("LoginScreen")}}
+         />
+
+<DrawerItem
+       
+       labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
+           label="ProductDetail"
+           onPress={() => {props.navigation.navigate("ProductDetail")}}
+         />
+
+<DrawerItem
+       
+       labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
+           label="Order Detail"
            onPress={() => {props.navigation.navigate("Show Order Detail")}}
          />
          {/* <DrawerItem
@@ -82,12 +92,12 @@ const showCustomer = (props) => (
            label="SignUp"
            onPress={() => {props.navigation.navigate("SignUp")}}
          /> */}
-<DrawerItem
+{/* <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}
            label="Cart"
            onPress={() => {props.navigation.navigate("Cart")}}
-         />
+         /> */}
 {/* <DrawerItem
        
        labelStyle={{fontSize:16 ,fontFamily:"Nunito",color:theme.colors.textPrimary}}

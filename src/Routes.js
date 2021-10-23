@@ -67,9 +67,9 @@ function Routes(props) {
             name="Show Order Detail"
             component={ShowOrderDetails}
           />
+          <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="Add Claims" component={AddClaim} />
           <Drawer.Screen name="My Orders" component={ShowClaims} />
-          <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="Change Password" component={Changepassword} />
           <Drawer.Screen name="Customer Details" component={CustomerDetail} />
           <Drawer.Screen name="SignUp" component={SignUp} />    

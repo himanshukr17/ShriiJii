@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { ThemeProvider } from 'react-native-elements';
 
 import Background from '../../components/Background';
@@ -24,7 +24,12 @@ import { BlurView } from "@react-native-community/blur";
 import PhoneNumberInput from '../../components/CustomInputs/PhoneInput';
 import { BoxShadow } from 'react-native-shadow'
 import Card from "../../components/Cards/ProductCardH"
-const LoginScreen = (props) => (
+const LoginScreen = (props) => {
+
+    const[state,setState]=useState("#DC143C")
+
+    return(
+
     <Container>
         <Header  >
             <Nav
@@ -69,9 +74,23 @@ const LoginScreen = (props) => (
                 place={"Search For Products"}
                 />
             </View>
-            <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>NEW ARRIVALS</Typography>
+            <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>MY WISHLIST</Typography>
             <Divider style={{ backgroundColor: "#ffb300", height: 2,width:'40%',marginLeft:-2 }} />
             <View style={{flexDirection:'row',marginLeft:-20}}>
+
+
+            <AvatarList
+              onPress={()=>props.navigation.navigate("Order")}
+         name={"Name of the product [desc written here in maximum 2 lines]"}
+         subtitle={"CATAGORY NAME"}
+         subtitle1={"Rs.15000/-   "}
+         subtitle2={"Rs.20000/-"}
+         badgeText={"Farmer"}
+         badgeColor={"green"}
+         colour={state}
+         avatar_url={"../../assets/images/apple.png"}
+         onPress1={()=>setState(state=="#DC143C"?"#a8a8a8":"#DC143C")}
+         />
                 
             
             <AvatarList
@@ -86,7 +105,7 @@ const LoginScreen = (props) => (
          />
          
        
-       <AvatarList
+       {/* <AvatarList
               
          name={"Name of the product [desc written here in maximum 2 lines]"}
          subtitle={"CATAGORY NAME"}
@@ -98,6 +117,29 @@ const LoginScreen = (props) => (
          />
          </View>
          <View style={{flexDirection:'row',marginLeft:-20}}>
+            <AvatarList
+              
+         name={"Name of the product [desc written here in maximum 2 lines]"}
+         subtitle={"CATAGORY NAME"}
+         subtitle1={"Rs.15000/-   "}
+         subtitle2={"Rs.20000/-"}
+         badgeText={"Farmer"}
+         badgeColor={"green"}
+         avatar_url={"../../assets/images/apple.png"}
+         />
+       
+       <AvatarList
+              
+         name={"Name of the product [desc written here in maximum 2 lines]"}
+         subtitle={"CATAGORY NAME"}
+         subtitle1={"Rs.15000/-   "}
+         subtitle2={"Rs.20000/-"}
+         badgeText={"Farmer"}
+         badgeColor={"green"}
+         avatar_url={"../../assets/images/apple.png"}
+         />
+         </View>
+         <View style={{flexDirection:'row',marginLeft:-20}}> */}
             <AvatarList
               
          name={"Name of the product [desc written here in maximum 2 lines]"}
@@ -141,36 +183,14 @@ const LoginScreen = (props) => (
          badgeText={"Farmer"}
          badgeColor={"green"}
          avatar_url={"../../assets/images/apple.png"}
-         />
-         </View>
-         <View style={{flexDirection:'row',marginLeft:-20}}>
-            <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-         />
-       
-       <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
+        //  onPress1={()=>setState(state=="#a8a8a8"?"#DC143C":"#a8a8a8")}
          />
          </View>
          {/* <Divider style={{ backgroundColor: "black", height: 1 }} /> */}
-         <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>BEST SELLING</Typography>
-            <Divider style={{ backgroundColor: "#ffb300", height: 2,marginLeft:-2,width:'40%' }} />
+         {/* <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>BEST SELLING</Typography> */}
+            {/* <Divider style={{ backgroundColor: "#ffb300", height: 2,marginLeft:-2,width:'40%' }} /> */}
             <View style={{flexDirection:'row',marginLeft:-20}}>
-            <AvatarList
+            {/* <AvatarList
               
          name={"Name of the product [desc written here in maximum 2 lines]"}
          subtitle={"CATAGORY NAME"}
@@ -213,7 +233,7 @@ const LoginScreen = (props) => (
          badgeText={"Farmer"}
          badgeColor={"green"}
          avatar_url={"../../assets/images/apple.png"}
-         />
+         /> */}
          </View>
          
         </Content>
@@ -221,7 +241,7 @@ const LoginScreen = (props) => (
 
         </Footer>
     </Container>
-);
+)};
 
 const styles = StyleSheet.create({
     inputView: {

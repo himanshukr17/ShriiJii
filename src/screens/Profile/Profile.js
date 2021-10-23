@@ -73,7 +73,7 @@ export default function Profile(props) {
                         />
                         <View style={{ marginLeft: 10 }}>
 
-                            <Typography size={14} type={"extraBold"} style={{ marginTop: 12 }}>MOHIT GOPAL</Typography>
+                            <Typography size={14} type={"extraBold"} style={{ marginTop: 12 }}>Muskan Sharma</Typography>
                             <Typography size={12} type={"semiBold"} style={{ marginTop: 4 }}>customer</Typography>
                             {/* <Typography size={10} color={"white"} type={"semiBold"} style={{ marginTop: 8 }}>{props.details.EMP_CODE}</Typography> */}
 
@@ -91,7 +91,9 @@ export default function Profile(props) {
                             color={'red'}
                             style={{ alignItems: 'flex-start', marginLeft: 10 }}
                         /><View style={{ marginLeft: 15 }}>
+                            <TouchableOpacity  onPress = {() => props.navigation.navigate("Wishlist")}>
                             <Typography size={18}>MY WISHLIST</Typography>
+                            </TouchableOpacity>
                         </View></View></TouchableOpacity>
                 <Divider style={{ backgroundColor: 'grey', height: 0.5, width: '88%', marginLeft: '12%', marginTop: 3 }} />
                 <TouchableOpacity onPress={() => { }}>
@@ -102,7 +104,9 @@ export default function Profile(props) {
                             // color={'red'}
                             style={{ alignItems: 'flex-start', marginLeft: 10 }}
                         /><View style={{ marginLeft: 15 }}>
+                            <TouchableOpacity  onPress = {() => props.navigation.navigate("My Orders")}>
                             <Typography size={18}>MY ORDERS</Typography>
+                            </TouchableOpacity>
                         </View></View></TouchableOpacity>
                 <Divider style={{ backgroundColor: 'grey', height: 0.5, width: '88%', marginLeft: '12%', marginTop: 3 }} />
                 <TouchableOpacity onPress={() => { }}>
