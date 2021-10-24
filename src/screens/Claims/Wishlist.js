@@ -26,26 +26,26 @@ import { BoxShadow } from 'react-native-shadow'
 import Card from "../../components/Cards/ProductCardH"
 const LoginScreen = (props) => {
 
-    const[state,setState]=useState("#DC143C")
+    const [state, setState] = useState("#DC143C")
 
-    return(
+    return (
 
-    <Container>
-        <Header  >
-            <Nav
+        <Container>
+            <Header  >
+                <Nav
 
-                leftComponent={
-                    <Icon
-                        onPress={() => props.navigation.toggleDrawer()}
-                        name={"list"}
-                        type={"feather"}
-                        size={25}
-                        style={{ marginLeft: 25, transform: [{ rotate: '-45deg' }] }}
-                    />}
+                    leftComponent={
+                        <Icon
+                            onPress={() => props.navigation.toggleDrawer()}
+                            name={"list"}
+                            type={"feather"}
+                            size={25}
+                            style={{ marginLeft: 25, transform: [{ rotate: '-45deg' }] }}
+                        />}
 
-                rightComponent={
-                    <View style={{ flexDirection: 'row' }}>
-                        <View style={{marginRight: 14 }}>
+                    rightComponent={
+                        <View style={{ flexDirection: 'row' }}>
+                            {/* <View style={{marginRight: 14 }}>
                         <Icon
                             onPress={()=> props.navigation.navigate("Wishlist")}
                             name={"heart"}
@@ -54,58 +54,58 @@ const LoginScreen = (props) => {
                             size={25}
                             style={{ marginRight: 14 }}
                         />
-                            </View>
-                        <Icon
-                            onPress={()=> props.navigation.navigate("Cart")}
-                            name={"cart-outline"}
-                            type={"ionicon"}
-                            color={"#ffb300"}
-                            size={25}
+                            </View> */}
+                            <Icon
+                                onPress={() => props.navigation.navigate("Cart")}
+                                name={"cart-outline"}
+                                type={"ionicon"}
+                                color={"#ffb300"}
+                                size={25}
                             // style={{ marginRight: 25 }}
-                        />
-                    </View>
-                }
-            />
-
-        </Header>
-        <Content >
-            <View style={{marginTop:30}}>
-                <Search 
-                place={"Search For Products"}
+                            />
+                        </View>
+                    }
                 />
-            </View>
-            <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>MY WISHLIST</Typography>
-            <Divider style={{ backgroundColor: "#ffb300", height: 2,width:'40%',marginLeft:-2 }} />
-            <View style={{flexDirection:'row',marginLeft:-20}}>
+
+            </Header>
+            <Content >
+                <View style={{ marginTop: 30 }}>
+                    <Search
+                        place={"Search For Products"}
+                    />
+                </View>
+                <Typography size={15} type={"italic"} style={{ marginTop: 10, marginBottom: 4 }}>MY WISHLIST</Typography>
+                <Divider style={{ backgroundColor: "#ffb300", height: 2, width: '40%', marginLeft: -2 }} />
+                <View style={{ flexDirection: 'row', marginLeft: -20 }}>
 
 
-            <AvatarList
-              onPress={()=>props.navigation.navigate("Order")}
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         colour={state}
-         avatar_url={"../../assets/images/apple.png"}
-         onPress1={()=>setState(state=="#DC143C"?"#a8a8a8":"#DC143C")}
-         />
-                
-            
-            <AvatarList
-              onPress={()=>props.navigation.navigate("Order")}
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-         />
-         
-       
-       {/* <AvatarList
+                    <AvatarList
+                        onPress={() => props.navigation.navigate("Order")}
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        colour={state}
+                        avatar_url={"../../assets/images/apple.png"}
+                        onPress1={() => setState(state == "#DC143C" ? "#a8a8a8" : "#DC143C")}
+                    />
+
+
+                    <AvatarList
+                        onPress={() => props.navigation.navigate("Order")}
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        avatar_url={"../../assets/images/apple.png"}
+                    />
+
+
+                    {/* <AvatarList
               
          name={"Name of the product [desc written here in maximum 2 lines]"}
          subtitle={"CATAGORY NAME"}
@@ -140,57 +140,57 @@ const LoginScreen = (props) => {
          />
          </View>
          <View style={{flexDirection:'row',marginLeft:-20}}> */}
-            <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-         />
-       
-       <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-         />
-         </View>
-         <View style={{flexDirection:'row',marginLeft:-20}}>
-            <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-         />
-       
-       <AvatarList
-              
-         name={"Name of the product [desc written here in maximum 2 lines]"}
-         subtitle={"CATAGORY NAME"}
-         subtitle1={"Rs.15000/-   "}
-         subtitle2={"Rs.20000/-"}
-         badgeText={"Farmer"}
-         badgeColor={"green"}
-         avatar_url={"../../assets/images/apple.png"}
-        //  onPress1={()=>setState(state=="#a8a8a8"?"#DC143C":"#a8a8a8")}
-         />
-         </View>
-         {/* <Divider style={{ backgroundColor: "black", height: 1 }} /> */}
-         {/* <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>BEST SELLING</Typography> */}
-            {/* <Divider style={{ backgroundColor: "#ffb300", height: 2,marginLeft:-2,width:'40%' }} /> */}
-            <View style={{flexDirection:'row',marginLeft:-20}}>
-            {/* <AvatarList
+                    <AvatarList
+
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        avatar_url={"../../assets/images/apple.png"}
+                    />
+
+                    <AvatarList
+
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        avatar_url={"../../assets/images/apple.png"}
+                    />
+                </View>
+                <View style={{ flexDirection: 'row', marginLeft: -20 }}>
+                    <AvatarList
+
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        avatar_url={"../../assets/images/apple.png"}
+                    />
+
+                    <AvatarList
+
+                        name={"Name of the product [desc written here in maximum 2 lines]"}
+                        subtitle={"CATAGORY NAME"}
+                        subtitle1={"Rs.15000/-   "}
+                        subtitle2={"Rs.20000/-"}
+                        badgeText={"Farmer"}
+                        badgeColor={"green"}
+                        avatar_url={"../../assets/images/apple.png"}
+                    //  onPress1={()=>setState(state=="#a8a8a8"?"#DC143C":"#a8a8a8")}
+                    />
+                </View>
+                {/* <Divider style={{ backgroundColor: "black", height: 1 }} /> */}
+                {/* <Typography size={15} type={"italic"} style={{marginTop:10,marginBottom:4}}>BEST SELLING</Typography> */}
+                {/* <Divider style={{ backgroundColor: "#ffb300", height: 2,marginLeft:-2,width:'40%' }} /> */}
+                <View style={{ flexDirection: 'row', marginLeft: -20 }}>
+                    {/* <AvatarList
               
          name={"Name of the product [desc written here in maximum 2 lines]"}
          subtitle={"CATAGORY NAME"}
@@ -234,14 +234,15 @@ const LoginScreen = (props) => {
          badgeColor={"green"}
          avatar_url={"../../assets/images/apple.png"}
          /> */}
-         </View>
-         
-        </Content>
-        <Footer>
+                </View>
 
-        </Footer>
-    </Container>
-)};
+            </Content>
+            <Footer>
+
+            </Footer>
+        </Container>
+    )
+};
 
 const styles = StyleSheet.create({
     inputView: {

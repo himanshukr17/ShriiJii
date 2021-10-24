@@ -8,13 +8,33 @@ import Nav from "../../components/Headers/header"
 import Typography from '../../components/Typography/Typography';
 // import Avatarwithouter from '../../components/List/Avatarwithouter';
 // import HollowButton from "../../components/CustomButtons/HollowButton"
-import { Text, View, StyleSheet, Image, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image,Share, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 // import Avatar from "../../components/List/Avatar"
 import Listitems from "../../components/List/Listitems"
 import { Divider } from 'react-native-paper'
 
 
 export default function Profile(props) {
+
+    const onShare = async () => {
+        try {
+          const result = await Share.share({
+            message:
+              'Share Link should be paste here',
+          });
+          if (result.action === Share.sharedAction) {
+            if (result.activityType) {
+              // shared with activity type of result.activityType
+            } else {
+              // shared
+            }
+          } else if (result.action === Share.dismissedAction) {
+            // dismissed
+          }
+        } catch (error) {
+          alert(error.message);
+        }
+      };
     return (
         <Container>
             <Header  >
@@ -120,7 +140,7 @@ export default function Profile(props) {
                             <Typography size={18}>RATE OUR APP</Typography>
                         </View></View></TouchableOpacity>
                 <Divider style={{ backgroundColor: 'grey', height: 0.5, width: '88%', marginLeft: '12%', marginTop: 3 }} />
-                <TouchableOpacity onPress={() => { }}>
+                <TouchableOpacity onPress={onShare}>
                     <View style={{ marginTop: 15, flexDirection: 'row', marginBottom: 15 }}>
                         <Icon
                             name={"share-social"}
